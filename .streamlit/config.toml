@@ -2,7 +2,10 @@
 headless = true
 enableCORS = false
 enableXsrfProtection = false
-fileWatcherType = "poll"
+fileWatcherType = "none"
+
+[browser]
+gatherUsageStats = false
 
 [theme]
 primaryColor = "#38bdf8"
