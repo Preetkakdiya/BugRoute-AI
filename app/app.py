@@ -126,7 +126,7 @@ st.sidebar.markdown("""
     <p style="margin-bottom: 3px;"><b>Swayam Raiyani</b><br><span style="color: #94a3b8;">12302130501053</span></p>
     <p style="margin-bottom: 0px;"><b>Vruti Thakkar</b><br><span style="color: #94a3b8;">12302130501063</span></p>
     <hr style="margin: 8px 0; border-color: #334155;">
-    <p style="font-size: 0.75rem; color: #cbd5e1; margin: 0;">GH Patel College of Engineering & Tech<br>Computer Science & Design</p>
+    <p style="font-size: 0.75rem; color: #cbd5e1; margin: 0;">GH Patel College of Engineering & Technology<br>Computer Science & Design</p>
 </div>
 """, unsafe_allow_html=True)
 
