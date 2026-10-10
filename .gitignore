@@ -1,0 +1,27 @@
+# Python Virtual Environments
+venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# OS & IDE Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Streamlit Local Runtime
+.streamlit/secrets.toml
+
+# Heavy Transformer Weights (Exceeding GitHub 100MB file limit)
+models/distilbert/
+models/codebert/
+*.bin
+*.h5
+*.safetensors

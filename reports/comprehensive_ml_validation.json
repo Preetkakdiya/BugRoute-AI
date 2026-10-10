@@ -1,0 +1,1341 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-10 14:10:25",
+    "num_classes": 9,
+    "classes": [
+      "Auth/Security",
+      "Backend API",
+      "Build/CI-CD",
+      "Compiler/Parser",
+      "Database",
+      "Memory/Performance",
+      "Network/HTTP",
+      "Other",
+      "UI/UX"
+    ]
+  },
+  "synthetic_test_set_375": {
+    "Linear SVM": {
+      "sample_count": 375,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "inference_ms": 9.1787,
+      "per_class_precision": {
+        "Auth/Security": 1.0,
+        "Backend API": 1.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 1.0,
+        "Other": 1.0,
+        "UI/UX": 1.0
+      },
+      "per_class_recall": {
+        "Auth/Security": 1.0,
+        "Backend API": 1.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 1.0,
+        "Other": 1.0,
+        "UI/UX": 1.0
+      },
+      "confusion_matrix": [
+        [
+          42,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          46,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          41,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          44
+        ]
+      ]
+    },
+    "Logistic Regression": {
+      "sample_count": 375,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "inference_ms": 0.5589,
+      "per_class_precision": {
+        "Auth/Security": 1.0,
+        "Backend API": 1.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 1.0,
+        "Other": 1.0,
+        "UI/UX": 1.0
+      },
+      "per_class_recall": {
+        "Auth/Security": 1.0,
+        "Backend API": 1.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 1.0,
+        "Other": 1.0,
+        "UI/UX": 1.0
+      },
+      "confusion_matrix": [
+        [
+          42,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          46,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          41,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          44
+        ]
+      ]
+    },
+    "BiLSTM + Attention": {
+      "sample_count": 375,
+      "accuracy": 1.0,
+      "macro_precision": 1.0,
+      "macro_recall": 1.0,
+      "macro_f1": 1.0,
+      "weighted_f1": 1.0,
+      "inference_ms": 4.552,
+      "per_class_precision": {
+        "Auth/Security": 1.0,
+        "Backend API": 1.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 1.0,
+        "Other": 1.0,
+        "UI/UX": 1.0
+      },
+      "per_class_recall": {
+        "Auth/Security": 1.0,
+        "Backend API": 1.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 1.0,
+        "Other": 1.0,
+        "UI/UX": 1.0
+      },
+      "confusion_matrix": [
+        [
+          42,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          40,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          46,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          41,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          40,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          37,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          44
+        ]
+      ]
+    },
+    "DistilBERT": {
+      "sample_count": 375,
+      "accuracy": 0.648,
+      "macro_precision": 0.7313,
+      "macro_recall": 0.6592,
+      "macro_f1": 0.6177,
+      "weighted_f1": 0.6058,
+      "inference_ms": 58.2063,
+      "per_class_precision": {
+        "Auth/Security": 0.5106,
+        "Backend API": 1.0,
+        "Build/CI-CD": 0.75,
+        "Compiler/Parser": 0.5,
+        "Database": 0.6383,
+        "Memory/Performance": 0.88,
+        "Network/HTTP": 0.5932,
+        "Other": 1.0,
+        "UI/UX": 0.7097
+      },
+      "per_class_recall": {
+        "Auth/Security": 0.5714,
+        "Backend API": 0.0208,
+        "Build/CI-CD": 0.8108,
+        "Compiler/Parser": 0.925,
+        "Database": 0.6522,
+        "Memory/Performance": 0.5366,
+        "Network/HTTP": 0.875,
+        "Other": 0.5405,
+        "UI/UX": 1.0
+      },
+      "confusion_matrix": [
+        [
+          24,
+          0,
+          5,
+          6,
+          0,
+          0,
+          7,
+          0,
+          0
+        ],
+        [
+          17,
+          1,
+          0,
+          12,
+          3,
+          0,
+          13,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          30,
+          3,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          37,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          4,
+          30,
+          3,
+          2,
+          0,
+          5
+        ],
+        [
+          0,
+          0,
+          0,
+          8,
+          9,
+          22,
+          2,
+          0,
+          0
+        ],
+        [
+          3,
+          0,
+          0,
+          0,
+          2,
+          0,
+          35,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          4,
+          0,
+          0,
+          0,
+          20,
+          11
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          44
+        ]
+      ]
+    },
+    "CodeBERT": {
+      "sample_count": 375,
+      "accuracy": 0.6613,
+      "macro_precision": 0.7323,
+      "macro_recall": 0.6434,
+      "macro_f1": 0.6036,
+      "weighted_f1": 0.612,
+      "inference_ms": 92.5574,
+      "per_class_precision": {
+        "Auth/Security": 1.0,
+        "Backend API": 0.7959,
+        "Build/CI-CD": 0.9524,
+        "Compiler/Parser": 0.8444,
+        "Database": 0.3511,
+        "Memory/Performance": 0.0,
+        "Network/HTTP": 1.0,
+        "Other": 1.0,
+        "UI/UX": 0.6471
+      },
+      "per_class_recall": {
+        "Auth/Security": 0.7857,
+        "Backend API": 0.8125,
+        "Build/CI-CD": 0.5405,
+        "Compiler/Parser": 0.95,
+        "Database": 1.0,
+        "Memory/Performance": 0.0,
+        "Network/HTTP": 0.675,
+        "Other": 0.027,
+        "UI/UX": 1.0
+      },
+      "confusion_matrix": [
+        [
+          33,
+          2,
+          0,
+          0,
+          7,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          39,
+          0,
+          0,
+          8,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          20,
+          0,
+          13,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          1,
+          0,
+          38,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          46,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          6,
+          33,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          5,
+          0,
+          0,
+          8,
+          0,
+          27,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          1,
+          15,
+          0,
+          0,
+          1,
+          17
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          44
+        ]
+      ]
+    }
+  },
+  "real_world_benchmark_20": {
+    "Linear SVM": {
+      "sample_count": 20,
+      "accuracy": 0.9,
+      "macro_precision": 0.9352,
+      "macro_recall": 0.9074,
+      "macro_f1": 0.9026,
+      "weighted_f1": 0.8952,
+      "inference_ms": 3.3857,
+      "per_class_precision": {
+        "Auth/Security": 0.6667,
+        "Backend API": 1.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 0.75,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 1.0,
+        "Other": 1.0,
+        "UI/UX": 1.0
+      },
+      "per_class_recall": {
+        "Auth/Security": 1.0,
+        "Backend API": 1.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 0.6667,
+        "Other": 0.5,
+        "UI/UX": 1.0
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "Logistic Regression": {
+      "sample_count": 20,
+      "accuracy": 0.85,
+      "macro_precision": 0.8889,
+      "macro_recall": 0.8519,
+      "macro_f1": 0.8444,
+      "weighted_f1": 0.8433,
+      "inference_ms": 0.8001,
+      "per_class_precision": {
+        "Auth/Security": 0.6667,
+        "Backend API": 1.0,
+        "Build/CI-CD": 0.6667,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 0.6667,
+        "Other": 1.0,
+        "UI/UX": 1.0
+      },
+      "per_class_recall": {
+        "Auth/Security": 1.0,
+        "Backend API": 0.5,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 0.6667,
+        "Other": 0.5,
+        "UI/UX": 1.0
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "BiLSTM + Attention": {
+      "sample_count": 20,
+      "accuracy": 0.35,
+      "macro_precision": 0.5185,
+      "macro_recall": 0.3704,
+      "macro_f1": 0.3651,
+      "weighted_f1": 0.3536,
+      "inference_ms": 4.1488,
+      "per_class_precision": {
+        "Auth/Security": 0.0,
+        "Backend API": 0.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 0.5,
+        "Database": 0.0,
+        "Memory/Performance": 0.1667,
+        "Network/HTTP": 1.0,
+        "Other": 1.0,
+        "UI/UX": 1.0
+      },
+      "per_class_recall": {
+        "Auth/Security": 0.0,
+        "Backend API": 0.0,
+        "Build/CI-CD": 0.5,
+        "Compiler/Parser": 0.5,
+        "Database": 0.0,
+        "Memory/Performance": 1.0,
+        "Network/HTTP": 0.3333,
+        "Other": 0.5,
+        "UI/UX": 0.5
+      },
+      "confusion_matrix": [
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    "DistilBERT": {
+      "sample_count": 20,
+      "accuracy": 0.6,
+      "macro_precision": 0.4241,
+      "macro_recall": 0.5926,
+      "macro_f1": 0.4772,
+      "weighted_f1": 0.4924,
+      "inference_ms": 44.7331,
+      "per_class_precision": {
+        "Auth/Security": 0.4,
+        "Backend API": 0.0,
+        "Build/CI-CD": 0.6667,
+        "Compiler/Parser": 1.0,
+        "Database": 0.5,
+        "Memory/Performance": 0.0,
+        "Network/HTTP": 0.75,
+        "Other": 0.0,
+        "UI/UX": 0.5
+      },
+      "per_class_recall": {
+        "Auth/Security": 1.0,
+        "Backend API": 0.0,
+        "Build/CI-CD": 1.0,
+        "Compiler/Parser": 1.0,
+        "Database": 0.3333,
+        "Memory/Performance": 0.0,
+        "Network/HTTP": 1.0,
+        "Other": 0.0,
+        "UI/UX": 1.0
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ]
+    },
+    "CodeBERT": {
+      "sample_count": 20,
+      "accuracy": 0.6,
+      "macro_precision": 0.4889,
+      "macro_recall": 0.5741,
+      "macro_f1": 0.482,
+      "weighted_f1": 0.5238,
+      "inference_ms": 94.2823,
+      "per_class_precision": {
+        "Auth/Security": 0.6667,
+        "Backend API": 0.3333,
+        "Build/CI-CD": 0.0,
+        "Compiler/Parser": 1.0,
+        "Database": 1.0,
+        "Memory/Performance": 0.0,
+        "Network/HTTP": 1.0,
+        "Other": 0.0,
+        "UI/UX": 0.4
+      },
+      "per_class_recall": {
+        "Auth/Security": 1.0,
+        "Backend API": 1.0,
+        "Build/CI-CD": 0.0,
+        "Compiler/Parser": 0.5,
+        "Database": 1.0,
+        "Memory/Performance": 0.0,
+        "Network/HTTP": 0.6667,
+        "Other": 0.0,
+        "UI/UX": 1.0
+      },
+      "confusion_matrix": [
+        [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      ]
+    }
+  }
+}

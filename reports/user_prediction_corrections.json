@@ -1,0 +1,92 @@
+[
+  {
+    "timestamp": "2026-10-10 13:52:34",
+    "title": "Recovery Test",
+    "description": "Recovery Desc",
+    "model_used": "Linear SVM",
+    "predicted_class": "UI/UX",
+    "predicted_confidence": 0.9,
+    "user_corrected_class": "UI/UX",
+    "user_feedback": "Post-corruption recovery."
+  },
+  {
+    "timestamp": "2026-10-10 15:13:49",
+    "title": "2026-10-10 09:16:15 ERROR [disk] Disk space critically low: 98% used on /dev/sda1",
+    "description": "2026-10-10 09:16:15 ERROR [disk] Disk space critically low: 98% used on /dev/sda1",
+    "model_used": "Compare All 5 Models",
+    "predicted_class": "UI/UX",
+    "predicted_confidence": 0.1111,
+    "user_corrected_class": "Backend API",
+    "user_feedback": ""
+  },
+  {
+    "timestamp": "2026-10-10 15:18:38",
+    "title": "Test Correction Entry",
+    "description": "Database connection pool timeout",
+    "model_used": "Linear SVM",
+    "predicted_class": "Database",
+    "predicted_confidence": 0.95,
+    "user_corrected_class": "Backend API",
+    "user_feedback": "Unit test feedback verification"
+  },
+  {
+    "timestamp": "2026-10-10 15:20:56",
+    "title": "Test Correction Entry",
+    "description": "Database connection pool timeout",
+    "model_used": "Linear SVM",
+    "predicted_class": "Database",
+    "predicted_confidence": 0.95,
+    "user_corrected_class": "Backend API",
+    "user_feedback": "Unit test feedback verification"
+  },
+  {
+    "timestamp": "2026-10-10 15:26:35",
+    "title": "Test Correction Entry",
+    "description": "Database connection pool timeout",
+    "model_used": "Linear SVM",
+    "predicted_class": "Database",
+    "predicted_confidence": 0.95,
+    "user_corrected_class": "Backend API",
+    "user_feedback": "Unit test feedback verification"
+  },
+  {
+    "timestamp": "2026-10-10 15:30:58",
+    "title": "Test Correction Entry",
+    "description": "Database connection pool timeout",
+    "model_used": "Linear SVM",
+    "predicted_class": "Database",
+    "predicted_confidence": 0.95,
+    "user_corrected_class": "Backend API",
+    "user_feedback": "Unit test feedback verification"
+  },
+  {
+    "timestamp": "2026-10-10 16:52:24",
+    "title": "Test Correction Entry",
+    "description": "Database connection pool timeout",
+    "model_used": "Linear SVM",
+    "predicted_class": "Database",
+    "predicted_confidence": 0.95,
+    "user_corrected_class": "Backend API",
+    "user_feedback": "Unit test feedback verification"
+  },
+  {
+    "timestamp": "2026-10-10 16:54:39",
+    "title": "Test Correction Entry",
+    "description": "Database connection pool timeout",
+    "model_used": "Linear SVM",
+    "predicted_class": "Database",
+    "predicted_confidence": 0.95,
+    "user_corrected_class": "Backend API",
+    "user_feedback": "Unit test feedback verification"
+  },
+  {
+    "timestamp": "2026-10-10 16:56:56",
+    "title": "Test Correction Entry",
+    "description": "Database connection pool timeout",
+    "model_used": "Linear SVM",
+    "predicted_class": "Database",
+    "predicted_confidence": 0.95,
+    "user_corrected_class": "Backend API",
+    "user_feedback": "Unit test feedback verification"
+  }
+]

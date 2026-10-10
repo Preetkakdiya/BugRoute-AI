@@ -1,0 +1,6 @@
+Model,Accuracy,Macro Precision,Macro Recall,Macro-F1,Weighted-F1,Top-3 Accuracy,Inference Time (ms/sample),Model Size (MB)
+Logistic Regression,1.0,1.0,1.0,1.0,1.0,1.0,0.0056,0.25
+Linear SVM,1.0,1.0,1.0,1.0,1.0,1.0,0.0255,0.75
+BiLSTM + Attention,1.0,1.0,1.0,1.0,1.0,1.0,1.3341,2.92
+DistilBERT,0.648,0.7313,0.6592,0.6177,0.6058,0.8907,20.8855,256.13
+CodeBERT,0.6613,0.7323,0.6434,0.6036,0.612,0.84,46.233,478.93

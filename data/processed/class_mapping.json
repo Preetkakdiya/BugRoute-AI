@@ -1,0 +1,11 @@
+{
+  "0": "Auth/Security",
+  "1": "Backend API",
+  "2": "Build/CI-CD",
+  "3": "Compiler/Parser",
+  "4": "Database",
+  "5": "Memory/Performance",
+  "6": "Network/HTTP",
+  "7": "Other",
+  "8": "UI/UX"
+}

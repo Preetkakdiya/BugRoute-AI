@@ -1,0 +1,2143 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-10 13:36:15",
+    "test_type": "Exploratory Real-World Generalization Test",
+    "total_examples": 20,
+    "num_classes": 9,
+    "disclaimer": "20 manually written examples provide preliminary evidence of model generalization, not statistically conclusive validation."
+  },
+  "summary_metrics": {
+    "Logistic Regression": {
+      "correct": 17,
+      "total": 20,
+      "accuracy_pct": 85.0,
+      "avg_confidence": 0.2021
+    },
+    "Linear SVM": {
+      "correct": 18,
+      "total": 20,
+      "accuracy_pct": 90.0,
+      "avg_confidence": 0.8447
+    },
+    "BiLSTM + Attention": {
+      "correct": 7,
+      "total": 20,
+      "accuracy_pct": 35.0,
+      "avg_confidence": 0.8081
+    },
+    "DistilBERT": {
+      "correct": 12,
+      "total": 20,
+      "accuracy_pct": 60.0,
+      "avg_confidence": 0.2171
+    },
+    "CodeBERT": {
+      "correct": 12,
+      "total": 20,
+      "accuracy_pct": 60.0,
+      "avg_confidence": 0.1835
+    }
+  },
+  "test_cases": [
+    {
+      "id": 1,
+      "title": "Dropdown menu cut off inside responsive modal wrapper on mobile viewports",
+      "description": "When resizing screen below 600px width, selecting options in filter menu gets hidden behind container boundary. Needs z-index adjustment and overflow visible on parent modal overlay.",
+      "expected_class": "UI/UX",
+      "category_type": "Standard",
+      "notes": "Classic responsive layout clipping bug.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.2759,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.2759
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1008
+            },
+            {
+              "component": "Database",
+              "confidence": 0.0965
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.9793,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.9793
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.0054
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.0034
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.4721,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.4721
+            },
+            {
+              "component": "Other",
+              "confidence": 0.4049
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.0885
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.3405,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.3405
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1137
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0971
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.2782,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.2782
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1304
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1202
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "title": "Dark mode toggle fails to persist preference across page refresh",
+      "description": "User switches theme switch in top bar, but on reload it reverts back to light theme. LocalStorage key is not read during initial component layout mount.",
+      "expected_class": "UI/UX",
+      "category_type": "Standard",
+      "notes": "Frontend component state persistence defect.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.1609,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.1609
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1319
+            },
+            {
+              "component": "Other",
+              "confidence": 0.1229
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.7617,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.7617
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1273
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0426
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9231,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9231
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0492
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.0128
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.3799,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.3799
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1174
+            },
+            {
+              "component": "Other",
+              "confidence": 0.101
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.2001,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.2001
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1295
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1224
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "title": "Deadlock during concurrent bulk update of user subscription records",
+      "description": "Parallel background jobs attempting to lock target rows in customer table cause SQL state 40001 under heavy read-write load. Need transaction isolation level review and index tuning.",
+      "expected_class": "Database",
+      "category_type": "Standard",
+      "notes": "Relational database transaction locking deadlock.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Database",
+          "confidence": 0.2786,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.2786
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.104
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.103
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Database",
+          "confidence": 0.9764,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.9764
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.0084
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.0048
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Compiler/Parser",
+          "confidence": 0.4265,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.4265
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.3773
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1025
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Database",
+          "confidence": 0.1686,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.1686
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1366
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1325
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Database",
+          "confidence": 0.209,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.209
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1325
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.1212
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 4,
+      "title": "PostgreSQL connection pool drops idle connections without recycling",
+      "description": "HikariCP pool holds stale connections when database restarts, causing application queries to fail with Broken Pipe error until application restarted.",
+      "expected_class": "Database",
+      "category_type": "Standard",
+      "notes": "Database connection pooling and lifecycle issue.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Database",
+          "confidence": 0.2271,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.2271
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1124
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1077
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Database",
+          "confidence": 0.9659,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.9659
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0096
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0048
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.8668,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.8668
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.0698
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0188
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.1543,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1543
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.148
+            },
+            {
+              "component": "Database",
+              "confidence": 0.145
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Database",
+          "confidence": 0.18,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.18
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1722
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1633
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 5,
+      "title": "Session token remains valid after user requests full logout",
+      "description": "JWT revocation endpoint returns success, but previously issued token can still be used to invoke protected endpoints because server-side blacklist isn't checked in gateway filter.",
+      "expected_class": "Auth/Security",
+      "category_type": "Standard",
+      "notes": "Token invalidation security flaw.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.271,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.271
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1119
+            },
+            {
+              "component": "Database",
+              "confidence": 0.0961
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.9781,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.9781
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0071
+            },
+            {
+              "component": "Database",
+              "confidence": 0.0041
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Backend API",
+          "confidence": 0.3052,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.3052
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1729
+            },
+            {
+              "component": "Other",
+              "confidence": 0.172
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.2346,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.2346
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.174
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1374
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.2201,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.2201
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1565
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1344
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 6,
+      "title": "OAuth2 redirect URI validation bypass via double slash in callback path",
+      "description": "Attacker can supply an external redirect location by manipulating trailing slashes in authorization URL, bypassing domain restriction check.",
+      "expected_class": "Auth/Security",
+      "category_type": "Standard",
+      "notes": "Open redirect authorization security defect.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.1824,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1824
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1306
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1039
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.9309,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.9309
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0367
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.008
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9843,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9843
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0082
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0041
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.2155,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.2155
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1886
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1427
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.2302,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.2302
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1686
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1208
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 7,
+      "title": "JSON deserialization throws unexpected null pointer on missing metadata payload",
+      "description": "Sending a POST payload without optional client_info field causes 500 internal server error instead of default fallback handling in OrderProcessingController.",
+      "expected_class": "Backend API",
+      "category_type": "Standard",
+      "notes": "Backend API request body parsing error.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Backend API",
+          "confidence": 0.2066,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.2066
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1088
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1088
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Backend API",
+          "confidence": 0.9465,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.9465
+            },
+            {
+              "component": "Database",
+              "confidence": 0.0132
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.0119
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9812,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9812
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.012
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0047
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.1546,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1546
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1449
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1403
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Backend API",
+          "confidence": 0.192,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.192
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1459
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1395
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 8,
+      "title": "REST endpoint returns incorrect HTTP 200 status code on partial resource creation failure",
+      "description": "When secondary item processing fails inside batch endpoint, response body shows error list but HTTP status code remains 200 OK instead of 207 Multi-Status or 400.",
+      "expected_class": "Backend API",
+      "category_type": "Standard",
+      "notes": "API protocol response status code contract mismatch.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.1438,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1438
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1407
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1156
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Backend API",
+          "confidence": 0.469,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.469
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.3424
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.0545
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9263,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9263
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0494
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0078
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.143,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.143
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1351
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1341
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Backend API",
+          "confidence": 0.1673,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.1673
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1398
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.1274
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 9,
+      "title": "Unclosed file handles during daily export cause JVM native heap exhaustion",
+      "description": "ZipOutputStream is opened inside iteration loop without try-with-resources. Over time, file descriptor count increases until process crashes with OutOfMemoryError.",
+      "expected_class": "Memory/Performance",
+      "category_type": "Standard",
+      "notes": "Resource leak leading to process memory exhaustion.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.1834,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.1834
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.139
+            },
+            {
+              "component": "Other",
+              "confidence": 0.106
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.8569,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.8569
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.0738
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0155
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9946,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9946
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0019
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0015
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Database",
+          "confidence": 0.172,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.172
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.1442
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.1433
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Backend API",
+          "confidence": 0.1521,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.1521
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1421
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1391
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 10,
+      "title": "High CPU spike and garbage collection pauses during large PDF rendering",
+      "description": "Generating monthly reports with high image density triggers excessive temporary object allocations, leading to full GC pauses exceeding 12 seconds.",
+      "expected_class": "Memory/Performance",
+      "category_type": "Standard",
+      "notes": "Memory allocation churn and GC pause bottleneck.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.1816,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.1816
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1142
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1112
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9261,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9261
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.0209
+            },
+            {
+              "component": "Database",
+              "confidence": 0.0136
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9308,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9308
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0251
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0165
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.2051,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.2051
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1318
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1295
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.1741,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.1741
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1425
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1251
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 11,
+      "title": "Upstream ingress proxy drops requests with TLS handshake timeout under high latency",
+      "description": "Inter-service calls between API Gateway and Payment Service fail intermittently during peak traffic, logging SocketTimeoutException after 5000ms.",
+      "expected_class": "Network/HTTP",
+      "category_type": "Standard",
+      "notes": "Network socket timeout across service proxy.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.1634,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1634
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1394
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1253
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.6776,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.6776
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1747
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0883
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.4679,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.4679
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.1527
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1372
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.2969,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.2969
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.159
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1515
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.1974,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1974
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1715
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1352
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 12,
+      "title": "gRPC client fails to resolve Kubernetes service DNS name after pod migration",
+      "description": "Channel connection sticks to old pod IP address after deployment rollout, raising UnknownHostException until DNS cache expires.",
+      "expected_class": "Network/HTTP",
+      "category_type": "Standard",
+      "notes": "Network resolution failure following container migration.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.1986,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1986
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1324
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1197
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.8498,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.8498
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.0833
+            },
+            {
+              "component": "Database",
+              "confidence": 0.0465
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.8339,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.8339
+            },
+            {
+              "component": "Other",
+              "confidence": 0.1044
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0298
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.2321,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.2321
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1684
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1461
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.1707,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1707
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1674
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1512
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 13,
+      "title": "GitHub Actions workflow fails at container publishing step due to missing credentials",
+      "description": "Pull request build from fork fails during image upload because AWS ECR authorization secret is omitted in non-main branch pipeline scope.",
+      "expected_class": "Build/CI-CD",
+      "category_type": "Standard",
+      "notes": "CI/CD deployment pipeline secret missing.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Build/CI-CD",
+          "confidence": 0.2751,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.2751
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.1001
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.0962
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Build/CI-CD",
+          "confidence": 0.9763,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.9763
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.0062
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0047
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Build/CI-CD",
+          "confidence": 0.8536,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.8536
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.0602
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0581
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Build/CI-CD",
+          "confidence": 0.1634,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1634
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1344
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1264
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Backend API",
+          "confidence": 0.1462,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.1462
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1335
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.1273
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 14,
+      "title": "Maven build fails due to transient dependency version mismatch in release candidate",
+      "description": "Running mvn clean package on fresh environment pulls incompatible guava transitive dependency, failing compilation.",
+      "expected_class": "Build/CI-CD",
+      "category_type": "Standard",
+      "notes": "Build system dependency resolution failure.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Build/CI-CD",
+          "confidence": 0.2192,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.2192
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.1117
+            },
+            {
+              "component": "Other",
+              "confidence": 0.1084
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Build/CI-CD",
+          "confidence": 0.9652,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.9652
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.0125
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0065
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9191,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9191
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.031
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.0209
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Build/CI-CD",
+          "confidence": 0.2463,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.2463
+            },
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1202
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1067
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Backend API",
+          "confidence": 0.1384,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.1384
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.1352
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1313
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 15,
+      "title": "Custom AST parser crashes on nested macro declarations with generic type parameters",
+      "description": "Extensible type checker fails with ClassCastException when analyzing multi-level nested template definitions in user code editor.",
+      "expected_class": "Compiler/Parser",
+      "category_type": "Standard",
+      "notes": "Abstract syntax tree type analyzer crash.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Compiler/Parser",
+          "confidence": 0.2315,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.2315
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1107
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1059
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Compiler/Parser",
+          "confidence": 0.9652,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.9652
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.0105
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0074
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Compiler/Parser",
+          "confidence": 0.8712,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.8712
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.1137
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0077
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Compiler/Parser",
+          "confidence": 0.1967,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.1967
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1389
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1297
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Backend API",
+          "confidence": 0.1435,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Backend API",
+              "confidence": 0.1435
+            },
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.1335
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1315
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 16,
+      "title": "Lexer fails to tokenize raw string literals containing unescaped backslashes",
+      "description": "Syntax highlighting and code analyzer report parse error on valid multiline string blocks with file path content.",
+      "expected_class": "Compiler/Parser",
+      "category_type": "Standard",
+      "notes": "Lexical analyzer string tokenization error.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Compiler/Parser",
+          "confidence": 0.1527,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.1527
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1209
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1188
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Compiler/Parser",
+          "confidence": 0.8309,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.8309
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0606
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.029
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9948,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9948
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0027
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.002
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Compiler/Parser",
+          "confidence": 0.1684,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.1684
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1469
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1312
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Compiler/Parser",
+          "confidence": 0.1665,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Compiler/Parser",
+              "confidence": 0.1665
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1462
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1281
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 17,
+      "title": "Third-party analytics script fails to record consent banner choices",
+      "description": "Cookie consent preferences are not synchronized with marketing analytics SDK on initial lander.",
+      "expected_class": "Other",
+      "category_type": "Standard",
+      "notes": "Third-party analytics integration defect.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Build/CI-CD",
+          "confidence": 0.141,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.141
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1206
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1194
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Database",
+          "confidence": 0.3451,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.3451
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.2984
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.0877
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9835,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9835
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0098
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0034
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.1759,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.1759
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1676
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1382
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.171,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.171
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1325
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1294
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 18,
+      "title": "Localization string missing for key app.settings.notifications.email_digest",
+      "description": "Spanish translation bundle shows raw key string on settings page for email preference option.",
+      "expected_class": "Other",
+      "category_type": "Standard",
+      "notes": "Internationalization / translation asset missing.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Other",
+          "confidence": 0.2078,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Other",
+              "confidence": 0.2078
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1173
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.1071
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Other",
+          "confidence": 0.94,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Other",
+              "confidence": 0.94
+            },
+            {
+              "component": "Database",
+              "confidence": 0.0233
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.0113
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Other",
+          "confidence": 0.884,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Other",
+              "confidence": 0.884
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.1083
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.004
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.3056,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.3056
+            },
+            {
+              "component": "Other",
+              "confidence": 0.1967
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.098
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "UI/UX",
+          "confidence": 0.1579,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "UI/UX",
+              "confidence": 0.1579
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1538
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1353
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 19,
+      "title": "Database migration script consumes excessive RAM and crashes worker pod during index creation",
+      "description": "Running alembic migration to add gin index on audit log table causes postgres background worker memory usage to balloon until Linux OOM killer terminates node.",
+      "expected_class": "Database",
+      "category_type": "Mixed / Ambiguous (Database + Memory)",
+      "notes": "DB index operation causing memory exhaustion; expected primary target: Database.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Database",
+          "confidence": 0.1555,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.1555
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.1489
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.1165
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Database",
+          "confidence": 0.5963,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.5963
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.3568
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.0128
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Memory/Performance",
+          "confidence": 0.9901,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.9901
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0054
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0021
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Build/CI-CD",
+          "confidence": 0.1695,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1695
+            },
+            {
+              "component": "Database",
+              "confidence": 0.1375
+            },
+            {
+              "component": "Memory/Performance",
+              "confidence": 0.1191
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Database",
+          "confidence": 0.1457,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Database",
+              "confidence": 0.1457
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.1397
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1371
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": 20,
+      "title": "CORS preflight request rejected by gateway during cross-origin token refresh",
+      "description": "Browser blocks post request from frontend app to auth server because OPTIONS preflight lacks Access-Control-Allow-Headers header.",
+      "expected_class": "Network/HTTP",
+      "category_type": "Mixed / Ambiguous (Network + Auth)",
+      "notes": "CORS preflight header protocol failure during auth call; expected primary target: Network/HTTP.",
+      "predictions": {
+        "Logistic Regression": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.1849,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.1849
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1202
+            },
+            {
+              "component": "Other",
+              "confidence": 0.1045
+            }
+          ]
+        },
+        "Linear SVM": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.9566,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.9566
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.0141
+            },
+            {
+              "component": "Other",
+              "confidence": 0.0066
+            }
+          ]
+        },
+        "BiLSTM + Attention": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.5534,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.5534
+            },
+            {
+              "component": "Other",
+              "confidence": 0.2272
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.179
+            }
+          ]
+        },
+        "DistilBERT": {
+          "predicted_class": "Network/HTTP",
+          "confidence": 0.219,
+          "pass": true,
+          "top_3": [
+            {
+              "component": "Network/HTTP",
+              "confidence": 0.219
+            },
+            {
+              "component": "Auth/Security",
+              "confidence": 0.171
+            },
+            {
+              "component": "Build/CI-CD",
+              "confidence": 0.1463
+            }
+          ]
+        },
+        "CodeBERT": {
+          "predicted_class": "Auth/Security",
+          "confidence": 0.2304,
+          "pass": false,
+          "top_3": [
+            {
+              "component": "Auth/Security",
+              "confidence": 0.2304
+            },
+            {
+              "component": "Backend API",
+              "confidence": 0.1565
+            },
+            {
+              "component": "UI/UX",
+              "confidence": 0.1284
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
