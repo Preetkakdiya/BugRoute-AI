@@ -147,16 +147,18 @@ if tab_choice == "⚡ Classify Bug Report":
         {"name": "Build CI/CD", "title": "Docker build fails with OOM killer exit code 137", "desc": "Webpack bundling step inside GitHub Actions pipeline runs out of memory on node environment."}
     ]
 
+    if "bug_title_val" not in st.session_state:
+        st.session_state["bug_title_val"] = ""
+    if "bug_desc_val" not in st.session_state:
+        st.session_state["bug_desc_val"] = ""
+
     cols = st.columns(len(samples))
-    selected_sample = None
     for idx, sample in enumerate(samples):
         if cols[idx].button(sample["name"]):
-            selected_sample = sample
+            st.session_state["bug_title_val"] = sample["title"]
+            st.session_state["bug_desc_val"] = sample["desc"]
             if "extracted_log_issues" in st.session_state:
                 del st.session_state["extracted_log_issues"]
-
-    default_title = selected_sample["title"] if selected_sample else ""
-    default_desc = selected_sample["desc"] if selected_sample else ""
 
     # Optional File Upload Parser
     with st.expander("📁 Or Upload Bug Report File (.txt, .log, .json)"):
@@ -166,69 +168,78 @@ if tab_choice == "⚡ Classify Bug Report":
             help="Supports .txt, .log, or .json files up to 2MB. Log files with multiple stack traces are automatically parsed into individual issues."
         )
         if uploaded_file is not None:
-            file_bytes = uploaded_file.read()
-            if len(file_bytes) == 0:
-                st.warning("⚠️ Uploaded file is empty (0 bytes). Please upload a valid file.")
-                if "extracted_log_issues" in st.session_state:
-                    del st.session_state["extracted_log_issues"]
-            elif len(file_bytes) > 2 * 1024 * 1024:
-                st.error("⚠️ File size exceeds 2MB limit. Please upload a smaller file snippet.")
-                if "extracted_log_issues" in st.session_state:
-                    del st.session_state["extracted_log_issues"]
-            else:
-                try:
-                    content_str = file_bytes.decode("utf-8", errors="replace")
-                    if uploaded_file.name.endswith(".json"):
-                        if "extracted_log_issues" in st.session_state:
-                            del st.session_state["extracted_log_issues"]
-                        try:
-                            json_data = json.loads(content_str)
-                            if isinstance(json_data, dict):
-                                default_title = str(json_data.get("title", json_data.get("summary", uploaded_file.name)))
-                                default_desc = str(json_data.get("description", json_data.get("details", content_str)))
-                                st.success(f"✅ Loaded JSON bug report: '{default_title[:40]}...'")
+            file_id = f"{uploaded_file.name}_{uploaded_file.size}"
+            if st.session_state.get("last_processed_file") != file_id:
+                file_bytes = uploaded_file.read()
+                if len(file_bytes) == 0:
+                    st.warning("⚠️ Uploaded file is empty (0 bytes). Please upload a valid file.")
+                    if "extracted_log_issues" in st.session_state:
+                        del st.session_state["extracted_log_issues"]
+                elif len(file_bytes) > 2 * 1024 * 1024:
+                    st.error("⚠️ File size exceeds 2MB limit. Please upload a smaller file snippet.")
+                    if "extracted_log_issues" in st.session_state:
+                        del st.session_state["extracted_log_issues"]
+                else:
+                    try:
+                        content_str = file_bytes.decode("utf-8", errors="replace")
+                        if uploaded_file.name.endswith(".json"):
+                            if "extracted_log_issues" in st.session_state:
+                                del st.session_state["extracted_log_issues"]
+                            try:
+                                json_data = json.loads(content_str)
+                                if isinstance(json_data, dict):
+                                    st.session_state["bug_title_val"] = str(json_data.get("title", json_data.get("summary", uploaded_file.name)))
+                                    st.session_state["bug_desc_val"] = str(json_data.get("description", json_data.get("details", content_str)))
+                                    st.session_state["last_processed_file"] = file_id
+                                    st.success(f"✅ Loaded JSON bug report: '{st.session_state['bug_title_val'][:40]}...'")
+                                else:
+                                    st.error("⚠️ JSON file must contain a top-level object/dictionary.")
+                            except json.JSONDecodeError as je:
+                                st.error(f"⚠️ Malformed JSON file: {je}")
+                        
+                        elif uploaded_file.name.endswith(".log"):
+                            log_issues = extract_log_issues(content_str)
+                            if log_issues:
+                                st.session_state["extracted_log_issues"] = log_issues
+                                st.session_state["uploaded_file_name"] = uploaded_file.name
+                                st.session_state["bug_title_val"] = f"Log File: {uploaded_file.name} ({len(log_issues)} issue(s) extracted)"
+                                st.session_state["bug_desc_val"] = content_str
+                                st.session_state["last_processed_file"] = file_id
+                                st.success(f"✅ Extracted {len(log_issues)} distinct error issue(s) from '{uploaded_file.name}' with multiline stack traces grouped.")
                             else:
-                                st.error("⚠️ JSON file must contain a top-level object/dictionary.")
-                        except json.JSONDecodeError as je:
-                            st.error(f"⚠️ Malformed JSON file: {je}")
-                    
-                    elif uploaded_file.name.endswith(".log"):
-                        log_issues = extract_log_issues(content_str)
-                        if log_issues:
-                            st.session_state["extracted_log_issues"] = log_issues
-                            st.session_state["uploaded_file_name"] = uploaded_file.name
-                            default_title = f"Log File: {uploaded_file.name} ({len(log_issues)} issue(s) extracted)"
-                            default_desc = content_str
-                            st.success(f"✅ Extracted {len(log_issues)} distinct error issue(s) from '{uploaded_file.name}' with multiline stack traces grouped.")
+                                if "extracted_log_issues" in st.session_state:
+                                    del st.session_state["extracted_log_issues"]
+                                lines = [l.strip() for l in content_str.splitlines() if l.strip()]
+                                if lines:
+                                    st.session_state["bug_title_val"] = lines[0][:100]
+                                    st.session_state["bug_desc_val"] = "\n".join(lines[1:]) if len(lines) > 1 else lines[0]
+                                    st.session_state["last_processed_file"] = file_id
+                                    st.info(f"ℹ️ No distinct stack trace headers recognized in '{uploaded_file.name}'. Treating full log file content as a single bug report.")
+                                else:
+                                    st.warning("⚠️ Log file contains no readable text lines.")
+                        
                         else:
                             if "extracted_log_issues" in st.session_state:
                                 del st.session_state["extracted_log_issues"]
                             lines = [l.strip() for l in content_str.splitlines() if l.strip()]
                             if lines:
-                                default_title = lines[0][:100]
-                                default_desc = "\n".join(lines[1:]) if len(lines) > 1 else lines[0]
-                                st.info(f"ℹ️ No distinct stack trace headers recognized in '{uploaded_file.name}'. Treating full log file content as a single bug report.")
+                                st.session_state["bug_title_val"] = lines[0][:100]
+                                st.session_state["bug_desc_val"] = "\n".join(lines[1:]) if len(lines) > 1 else lines[0]
+                                st.session_state["last_processed_file"] = file_id
+                                st.success(f"✅ Parsed file '{uploaded_file.name}': Title set from line 1.")
                             else:
-                                st.warning("⚠️ Log file contains no readable text lines.")
-                    
-                    else:
-                        if "extracted_log_issues" in st.session_state:
-                            del st.session_state["extracted_log_issues"]
-                        lines = [l.strip() for l in content_str.splitlines() if l.strip()]
-                        if lines:
-                            default_title = lines[0][:100]
-                            default_desc = "\n".join(lines[1:]) if len(lines) > 1 else lines[0]
-                            st.success(f"✅ Parsed file '{uploaded_file.name}': Title set from line 1.")
-                        else:
-                            st.warning("⚠️ File contains no readable text lines.")
-                except Exception as fe:
-                    st.error(f"⚠️ Failed to parse uploaded file: {fe}")
+                                st.warning("⚠️ File contains no readable text lines.")
+                    except Exception as fe:
+                        st.error(f"⚠️ Failed to parse uploaded file: {fe}")
+        else:
+            if "last_processed_file" in st.session_state:
+                del st.session_state["last_processed_file"]
 
     col_left, col_right = st.columns([3, 2])
 
     with col_left:
-        title_input = st.text_input("Bug Title / Log Summary", value=default_title, placeholder="e.g. SQLException connection pool exhausted")
-        desc_input = st.text_area("Bug Description / Log Content", value=default_desc, height=180, placeholder="e.g. Paste full exception stack trace or log file contents...")
+        title_input = st.text_input("Bug Title / Log Summary", key="bug_title_val", placeholder="e.g. SQLException connection pool exhausted")
+        desc_input = st.text_area("Bug Description / Log Content", key="bug_desc_val", height=180, placeholder="e.g. Paste full exception stack trace or log file contents...")
 
         model_selected = st.selectbox(
             "Select Model Architecture",
