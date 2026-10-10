@@ -3,6 +3,8 @@ headless = true
 enableCORS = false
 enableXsrfProtection = false
 fileWatcherType = "none"
+address = "0.0.0.0"
+port = 8501
 
 [browser]
 gatherUsageStats = false
