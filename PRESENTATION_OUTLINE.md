@@ -3,7 +3,7 @@
 * **Title:** BugRoute AI — Intelligent Bug Classification
 * **Subtitle:** An Empirical Controlled Comparison of Classical ML, Sequential Deep Learning, and Pretrained Transformers
 * **Presenters:** Preet Kakdiya (12302130501043), Swayam Raiyani (12302130501053), Vruti Thakkar (12302130501063)
-* **Institution:** GH Patel College of Engineering and Technology — Computer Science and Design
+* **Institution:** G H Patel College of Engineering and Technology — Computer Science and Design
 
 ---
 

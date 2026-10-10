@@ -12,7 +12,7 @@
 
 ### 🎓 Academic & Team Information
 
-- **College:** GH Patel College of Engineering and Technology
+- **College:** G H Patel College of Engineering and Technology
 - **Department:** Computer Engineering Department
 - **Branch:** Computer Science and Design
 - **Project Title:** BugRoute AI — Intelligent Bug Classification
