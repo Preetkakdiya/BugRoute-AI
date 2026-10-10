@@ -26,7 +26,7 @@ from src.log_parser import extract_log_issues
 
 # Page Configuration
 st.set_page_config(
-    page_title="BugRoute AI — Automated Bug Routing",
+    page_title="BugRoute AI — Intelligent Bug Classification",
     page_icon="🐛",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -650,7 +650,7 @@ elif tab_choice == "ℹ️ About Project":
     - **College:** GH Patel College of Engineering and Technology
     - **Department:** Computer Engineering Department
     - **Branch:** Computer Science and Design
-    - **Project Title:** BugRoute AI — Intelligent Bug Detection Using NLP
+    - **Project Title:** BugRoute AI — Intelligent Bug Classification
     
     #### 👥 Team Members:
     - 👨‍💻 **Preet Kakdiya** — Enrollment: `12302130501043`

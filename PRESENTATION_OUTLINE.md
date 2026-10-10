@@ -1,9 +1,9 @@
 
 ## Slide 1: Title & Team Information
-* **Title:** BugRoute AI — Automatic Software Bug Classification and Component Routing
+* **Title:** BugRoute AI — Intelligent Bug Classification
 * **Subtitle:** An Empirical Controlled Comparison of Classical ML, Sequential Deep Learning, and Pretrained Transformers
-* **Presenters:** [Student Name / Team Name]
-* **Institution:** Department of Computer Science & Engineering
+* **Presenters:** Preet Kakdiya (12302130501043), Swayam Raiyani (12302130501053), Vruti Thakkar (12302130501063)
+* **Institution:** GH Patel College of Engineering and Technology — Computer Science and Design
 
 ---
 

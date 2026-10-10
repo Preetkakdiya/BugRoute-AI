@@ -1,4 +1,4 @@
-# 🐛 BugRoute AI — Automatic Software Bug Classification & Routing
+# 🐛 BugRoute AI — Intelligent Bug Classification
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.25+-red.svg)](https://streamlit.io/)
@@ -15,7 +15,7 @@
 - **College:** GH Patel College of Engineering and Technology
 - **Department:** Computer Engineering Department
 - **Branch:** Computer Science and Design
-- **Project Title:** BugRoute AI — Intelligent Bug Detection Using NLP
+- **Project Title:** BugRoute AI — Intelligent Bug Classification
 - **Team Members:**
   - **Preet Kakdiya** — `12302130501043`
   - **Swayam Raiyani** — `12302130501053`
