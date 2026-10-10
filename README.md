@@ -10,6 +10,19 @@
 
 ---
 
+### 🎓 Academic & Team Information
+
+- **College:** GH Patel College of Engineering and Technology
+- **Department:** Computer Engineering Department
+- **Branch:** Computer Science and Design
+- **Project Title:** BugRoute AI — Intelligent Bug Detection Using NLP
+- **Team Members:**
+  - **Preet Kakdiya** — `12302130501043`
+  - **Swayam Raiyani** — `12302130501053`
+  - **Vruti Thakkar** — `12302130501063`
+
+---
+
 ## 🏗️ System Architecture
 
 ```text

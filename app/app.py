@@ -118,6 +118,18 @@ tab_choice = st.sidebar.radio(
     ["⚡ Classify Bug Report", "📊 Compare Models & Generalization", "📈 Dataset Insights", "ℹ️ About Project"]
 )
 
+st.sidebar.markdown("---")
+st.sidebar.markdown("""
+<div style="font-size: 0.82rem; background: #1e293b; padding: 12px; border-radius: 8px; border: 1px solid #334155;">
+    <p style="color: #38bdf8; font-weight: bold; margin-bottom: 6px; font-size: 0.85rem;">🎓 Project Team</p>
+    <p style="margin-bottom: 3px;"><b>Preet Kakdiya</b><br><span style="color: #94a3b8;">12302130501043</span></p>
+    <p style="margin-bottom: 3px;"><b>Swayam Raiyani</b><br><span style="color: #94a3b8;">12302130501053</span></p>
+    <p style="margin-bottom: 0px;"><b>Vruti Thakkar</b><br><span style="color: #94a3b8;">12302130501063</span></p>
+    <hr style="margin: 8px 0; border-color: #334155;">
+    <p style="font-size: 0.75rem; color: #cbd5e1; margin: 0;">GH Patel College of Engineering & Tech<br>Computer Science & Design</p>
+</div>
+""", unsafe_allow_html=True)
+
 # -----------------------------------------------------------------------------
 # TAB 1: CLASSIFY BUG REPORT
 # -----------------------------------------------------------------------------
@@ -630,13 +642,26 @@ elif tab_choice == "📈 Dataset Insights":
 # TAB 4: ABOUT PROJECT
 # -----------------------------------------------------------------------------
 elif tab_choice == "ℹ️ About Project":
-    st.title("ℹ️ BugRoute AI Project Architecture")
-    st.markdown("""
-    ### Project Overview
-    **BugRoute AI** is an intelligent automated software bug classification and routing platform built for Computer Science research.
+    st.title("ℹ️ BugRoute AI Project Architecture & Team")
     
-    ### Key Highlights:
+    st.markdown("""
+    ### 🎓 Academic Project & Team Credentials
+    
+    - **College:** GH Patel College of Engineering and Technology
+    - **Department:** Computer Engineering Department
+    - **Branch:** Computer Science and Design
+    - **Project Title:** BugRoute AI — Intelligent Bug Detection Using NLP
+    
+    #### 👥 Team Members:
+    - 👨‍💻 **Preet Kakdiya** — Enrollment: `12302130501043`
+    - 👨‍💻 **Swayam Raiyani** — Enrollment: `12302130501053`
+    - 👩‍💻 **Vruti Thakkar** — Enrollment: `12302130501063`
+
+    ---
+
+    ### 🏗️ Project Architecture & Key Highlights
     - **5 Model Architectures**: Logistic Regression, Linear SVM, BiLSTM + Attention, DistilBERT, and CodeBERT.
     - **Multi-Issue Log Parser**: Automatically parses `.log` files with multiline stack traces into distinct error issues.
+    - **Empirical Generalization Benchmark**: Evaluated on 2,500 synthetic holdout samples and 20 out-of-domain software bug reports.
     - **Thread/Process-Locked Audit Logger**: Guarantees zero data corruption during prediction corrections.
     """)

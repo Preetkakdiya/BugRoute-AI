@@ -88,5 +88,15 @@
     "predicted_confidence": 0.95,
     "user_corrected_class": "Backend API",
     "user_feedback": "Unit test feedback verification"
+  },
+  {
+    "timestamp": "2026-10-10 17:05:10",
+    "title": "Test Correction Entry",
+    "description": "Database connection pool timeout",
+    "model_used": "Linear SVM",
+    "predicted_class": "Database",
+    "predicted_confidence": 0.95,
+    "user_corrected_class": "Backend API",
+    "user_feedback": "Unit test feedback verification"
   }
 ]
